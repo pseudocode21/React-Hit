@@ -21,14 +21,28 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
-                  <Link to="/" className="hover:underline">
+                  <NavLink
+                    className={({ isActive }) =>
+                      ` ${
+                        isActive ? "text-orange-700" : "text-gray-700"
+                      } hover:underline`
+                    }
+                    to="/"
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:underline">
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      ` ${
+                        isActive ? "text-orange-700" : "text-gray-700"
+                      } hover:underline`
+                    }
+                  >
                     About
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -39,7 +53,7 @@ export default function Footer() {
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/hiteshchoudhary"
+                    href="https://github.com/pseudocode21"
                     className="hover:underline"
                     target="_blank"
                     rel="noreferrer"
